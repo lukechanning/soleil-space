@@ -1,0 +1,55 @@
+    <!-- Navigation -->
+    <div class="contain-to-grid sticky">
+
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a class="logo show-for-small-only" href="#"><img src="http://placehold.it/50x50" /></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+
+          <div class="logo-wrapper hide-for-small-only">
+            <div class="logo">
+              <img src="http://placehold.it/350x150">
+            </div>
+          </div>
+
+          <!-- Right Nav Section -->
+           	    <?php
+        	        wp_nav_menu( array(
+        	            'theme_location' => 'primary',
+        	            'container' => false,
+        	            'depth' => 0,
+        	            'items_wrap' => '<ul class="right">%3$s</ul>',
+        	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+        	            'walker' => new reverie_walker( array(
+        	                'in_top_bar' => true,
+        	                'item_type' => 'li',
+        	                'menu_type' => 'main-menu'
+        	            ) ),
+        	        ) );
+        	    ?>
+
+          <!-- Left Nav Section -->
+          <?php
+        wp_nav_menu( array(
+	            'theme_location' => 'additional',
+	            'container' => false,
+	            'depth' => 0,
+	            'items_wrap' => '<ul class="left">%3$s</ul>',
+	            'walker' => new reverie_walker( array(
+	                'in_top_bar' => true,
+	                'item_type' => 'li',
+	                'menu_type' => 'main-menu'
+	            ) ),
+	        ) );
+          ?>
+
+        </section>
+      </nav>
+
+    </div><!-- /navigation -->
+
