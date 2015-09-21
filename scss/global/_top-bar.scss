@@ -11,7 +11,13 @@
     left: 50%;
     right: 50%;
     top: -2px;
+    text-align: center;
     margin-left: -46px;
+    h3 {
+      color: $white;
+      margin-top: 13%;
+      font-size: rem-calc(15px);
+    }
   }
 
   // Right part

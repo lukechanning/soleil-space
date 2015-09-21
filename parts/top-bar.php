@@ -4,7 +4,11 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a class="logo show-for-small-only" href="#"><img src="http://placehold.it/50x50" /></a></h1>
+            <h1><a class="logo show-for-small-only" href="#">
+              <?php
+                echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
+              ?>
+            </a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
@@ -13,7 +17,13 @@
 
           <div class="logo-wrapper hide-for-small-only">
             <div class="logo">
-              <img src="http://placehold.it/350x150">
+            <?php
+                if( get_theme_mod( 'soleil_logo') ) :
+                    echo '<img src="' . esc_url(get_theme_mod( 'soleil_logo' )) . '" />';
+                else : 
+                  echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
+                endif;
+            ?>
             </div>
           </div>
 

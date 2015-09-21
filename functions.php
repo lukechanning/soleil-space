@@ -36,6 +36,11 @@ require_once('lib/nav.php'); // filter default wordpress menu classes and clean 
     - add PressTrends, tracks how many people are using Reverie
 */
 require_once('lib/presstrends.php'); // load PressTrends to track the usage of Reverie across the web, comment this line if you don't want to be tracked
+/*
+6. lib/custom-o-matic.php
+    - Adds the bulk of our child-theme-esque customizer, widget, and post type changes
+*/
+require_once('lib/custom-o-matic.php');
 
 /**********************
 Add theme supports
