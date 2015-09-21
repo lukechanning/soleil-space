@@ -25,6 +25,9 @@
 	<!-- Enable Startup Image for iOS Home Screen Web App -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
+	
+	<!-- Add the Owl Carousel -->
+	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
 
 	<!-- Startup Image iPad Landscape (748x1024) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />

@@ -1,5 +1,6 @@
 <?php
-// create widget areas: sidebar, footer
+
+// create widget area sidebar one
 $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
@@ -10,6 +11,8 @@ foreach ($sidebars as $sidebar) {
         'after_title' => '</h4>'
     ));
 }
+
+// create widget area for footer
 $sidebars = array('Footer');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,

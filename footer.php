@@ -27,6 +27,9 @@
 		$(document).foundation();
 	})(jQuery);
 </script>
+
+<!-- Let's add the Owl Carousel -->
+<script src="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
 	
 </body>
 </html>
