@@ -1,0 +1,35 @@
+//Fire up the SCSS specs on that box
+section.home-middle {
+    .box {
+        padding: rem-calc(75px);
+        min-height: rem-calc(485px);
+        &.left {
+            background-color: $oil;
+            color: $white;
+            h3, h4, p {
+                color: $white;
+            }
+        }
+        &.right {
+            background: #f4f4f4 url('/wp-content/themes/grunterie/img/testimonials-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .testimonial {
+            margin-top: 24vh;
+            margin-top: rem-calc(80px);
+            text-align: right;
+        }
+        blockquote {
+            border-left: rem-calc(3px) solid rgba(25,25,25,0.55);
+        }
+    }
+    
+    //Style specific to the testimonials carousel
+    .owl-carousel {
+        .owl-dots {
+            background-color: transparent;
+        }
+    }
+    
+}
