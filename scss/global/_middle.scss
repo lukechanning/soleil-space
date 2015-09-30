@@ -6,8 +6,14 @@ section.home-middle {
         &.left {
             background-color: $oil;
             color: $white;
-            h3, h4, p {
+            h2, h4, p {
                 color: $white;
+            }
+            divider {
+                width: 65%;
+                height: 2px;
+                background-color: $white;
+                display: block;
             }
         }
         &.right {
