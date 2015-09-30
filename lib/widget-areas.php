@@ -23,4 +23,23 @@ foreach ($sidebars as $sidebar) {
         'after_title' => '</h4>'
     ));
 }
+
+//Let's add our custom widget blocks
+
+if ( ! function_exists( 'custom_sidebar_widgets' ) ) :
+function custom_sidebar_widgets() {
+    
+	register_sidebar(array(
+	  'id' => 'home-middle',
+	  'name' => __( 'Home Middle Block', 'foundationpress' ),
+	  'description' => __( 'Add a text widget to display the Home middle block', 'grunterie' ),
+	  'before_widget' => '<div class="large-6 box left columns">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3 class="lead">',
+	  'after_title' => '</h3>'
+	));
+	
+}
+add_action( 'widgets_init', 'custom_sidebar_widgets' );
+endif;
 ?>
