@@ -10,6 +10,9 @@
         //Now grab the middle blocks with our content / testimonials
         get_template_part('parts/home/home-middle');
         
+        //Let's get the map & contact section
+        get_template_part('parts/home/home-contact');
+        
 	    ?>
 	</div>
 		

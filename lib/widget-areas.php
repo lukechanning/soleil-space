@@ -39,6 +39,26 @@ function custom_sidebar_widgets() {
 	  'after_title' => '</h3>'
 	));
 	
+	register_sidebar(array(
+	  'id' => 'footer-contact-one',
+	  'name' => __( 'Footer Contact #1', 'foundationpress' ),
+	  'description' => __( 'Add a text widget to display the footer contact information (left block)', 'grunterie' ),
+	  'before_widget' => '<div class="small-12 medium-6 large-6 columns">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3>',
+	  'after_title' => '</h3>'
+	));
+	
+	register_sidebar(array(
+	  'id' => 'footer-contact-two',
+	  'name' => __( 'Footer Contact #2', 'foundationpress' ),
+	  'description' => __( 'Add a text widget to display the footer contact information (right block)', 'grunterie' ),
+	  'before_widget' => '<div class="small-12 medium-6 large-6 columns">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3>',
+	  'after_title' => '</h3>'
+	));
+	
 }
 add_action( 'widgets_init', 'custom_sidebar_widgets' );
 endif;

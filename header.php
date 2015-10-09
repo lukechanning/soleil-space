@@ -30,6 +30,9 @@
 	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css" />
 
+	<!-- Let's get some icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
+	
 	<!-- Startup Image iPad Landscape (748x1024) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
 	<!-- Startup Image iPad Portrait (768x1004) -->

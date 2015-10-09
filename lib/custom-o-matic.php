@@ -60,6 +60,19 @@ function soleil_customize_register( $wp_customize ) {
         'section' => 'soleil_logo_section',
         'settings' => 'soleil_logo',
     ) ) );
+    //Add Image to Homepage
+    $wp_customize->add_section( 'soleil_contact_section' , array(
+        'title'       => __( 'Soleil Logo', 'reverie' ),
+        'priority'   => 30,
+        'description' => 'Add a photo to replace the stock image for the contact section, just above the footer',
+    ) );
+    $wp_customize->add_setting( 'soleil_contact' );
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+    $wp_customize, 'soleil_contact', array(
+        'label'   => __( 'Contact Section', 'reverie' ),
+        'section' => 'soleil_contact_section',
+        'settings' => 'soleil_contact',
+    ) ) );
 }
 add_action( 'customize_register', 'soleil_customize_register' );
 
