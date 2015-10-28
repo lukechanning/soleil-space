@@ -63,5 +63,6 @@
     	});
 </script>
 	
+<script src="/wp-content/themes/grunterie/js/custom.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
                <?php //Let's get the title side of the deal ?>
                <div class="large-6 large-push-2 columns">
                 <div class="circle-bg quote-1">
-                  <h2><?php the_title(); ?></h3>
+                  <h2><?php the_title(); ?></h2>
                 </div>
               </div>
              <?php //Time to get the other side with the content ?> 

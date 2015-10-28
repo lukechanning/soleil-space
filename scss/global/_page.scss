@@ -1,0 +1,16 @@
+body.single, body.post, body.page {
+
+    //Let's make the content look like we want
+    header {
+        margin-bottom: 0;
+    }
+    .container {
+        > .row {
+            max-width: 100% !important;
+        }
+    }
+    #sidebar {
+        background-size: cover;
+    }
+    
+}
