@@ -4,7 +4,10 @@
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a class="logo show-for-small-only" href="#">
+            <h1>
+              <a class="logo show-for-small-only" href='<?php echo esc_url( home_url( '/' ) ); ?>'
+              title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
+              'rel='home'>
               <?php
                 echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
               ?>
@@ -17,13 +20,15 @@
 
           <div class="logo-wrapper hide-for-small-only">
             <div class="logo">
-            <?php
-                if( get_theme_mod( 'soleil_logo') ) :
-                    echo '<img src="' . esc_url(get_theme_mod( 'soleil_logo' )) . '" />';
-                else : 
-                  echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
-                endif;
-            ?>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <?php
+                    if( get_theme_mod( 'soleil_logo') ) :
+                        echo '<img src="' . esc_url(get_theme_mod( 'soleil_logo' )) . '" />';
+                    else : 
+                      echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
+                    endif;
+                ?>
+              </a>
             </div>
           </div>
 
