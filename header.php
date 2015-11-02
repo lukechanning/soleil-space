@@ -33,6 +33,9 @@
 	<!-- Let's get some icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
 	
+	<!-- And some fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+	
 	<!-- Startup Image iPad Landscape (748x1024) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
 	<!-- Startup Image iPad Portrait (768x1004) -->

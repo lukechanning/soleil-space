@@ -96,13 +96,39 @@
     }
     
   }
+  
+  //Defin the text section style
   .info-block {
     padding: rem-calc(60px) rem-calc(20px);
     background-color: #292c2f;
     min-height: 310px;
   }
+  
+  //Now let's do the photo part
   .photo-pop {
     padding: 6rem 2rem;
     min-height: 310px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,555555+100&amp;0+0,0.65+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(85,85,85,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(85,85,85,0.65))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(85,85,85,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(85,85,85,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(85,85,85,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(85,85,85,0.65) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6555555',GradientType=0 ); /* IE6-9 */
+    h2, p {
+      color: $white !important;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(25,25,25,0.25);
+    }
+    h2 {
+      font-family: $leckerli;
+      border-bottom: 2px solid $white;
+    }
+    p {
+      text-transform: lowercase;
+      font-weight: 600;
+    }
   }
+  
 }

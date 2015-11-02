@@ -5,6 +5,7 @@ body.single, body.post, body.page {
         margin-bottom: 0;
     }
     .container {
+        margin-top: 0;
         > .row {
             max-width: 100% !important;
         }
