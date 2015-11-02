@@ -9,11 +9,16 @@ body.home {
         
     .home-content {
         padding: 0 !important;
+        background-color: transparent !important;
     }
     
     header.contain-to-grid {
         margin-bottom: 0 !important;
         padding: 25px 0;
+    }
+    
+    .container {
+        margin-top: 0 !important;
     }
     
 }

@@ -1,5 +1,5 @@
 .footer-contact {
-  background-color: #292c2f;
+  background-color: transparent;
   text-align: center;
   font-size: 1.2rem;
   padding: 4rem;
@@ -98,8 +98,11 @@
   }
   .info-block {
     padding: rem-calc(60px) rem-calc(20px);
+    background-color: #292c2f;
+    min-height: 310px;
   }
   .photo-pop {
-    padding-left: 0;
+    padding: 6rem 2rem;
+    min-height: 310px;
   }
 }

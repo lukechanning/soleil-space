@@ -38,6 +38,16 @@ function custom_sidebar_widgets() {
 	  'before_title' => '<h3 class="lead">',
 	  'after_title' => '</h3>'
 	));
+
+	register_sidebar(array(
+	  'id' => 'footer-contact-flash',
+	  'name' => __( 'Footer Contact Flash', 'foundationpress' ),
+	  'description' => __( 'Add some text to really make the contact section pop!', 'grunterie' ),
+	  'before_widget' => '<div class="small-12 large-12 columns">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h2>',
+	  'after_title' => '</h2>'
+	));
 	
 	register_sidebar(array(
 	  'id' => 'footer-contact-one',

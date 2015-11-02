@@ -1,5 +1,6 @@
 //Fire up the SCSS specs on that box
 section.home-middle {
+    background-color: transparent !important;
     .box {
         padding: rem-calc(75px);
         min-height: rem-calc(515px);
@@ -17,7 +18,7 @@ section.home-middle {
             }
         }
         &.right {
-            background: #f4f4f4 url('/wp-content/themes/grunterie/img/testimonials-bg.png');
+            //background: #f4f4f4 url('/wp-content/themes/grunterie/img/testimonials-bg.png');
             background-size: cover;
             background-repeat: no-repeat;
         }

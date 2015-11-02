@@ -5,7 +5,12 @@ if (has_post_thumbnail( $post->ID ) ): ?>
   <aside id="sidebar" class="small-12 large-4 columns" role="sidebar" style="background-image: url('<?php echo $image[0]; ?>')">
     <?php else: ?>
     <aside id="sidebar" class="small-12 large-4 columns">
-<?php endif; ?>
+<?php
+  endif; 
+  if ( sidebar_subtitle_get_meta($post->id, 'sidebar_subtitle_subtitle_text', true) ) :
+    echo '<h2 class="subtitle">' . sidebar_subtitle_get_meta( 'sidebar_subtitle_subtitle_text' ) . '</h2>';
+  endif;
+?>
 
 	<?php dynamic_sidebar("Sidebar"); ?>
 	

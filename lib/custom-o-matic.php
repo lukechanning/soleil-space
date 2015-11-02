@@ -122,4 +122,64 @@ function testimonial_post_type() {
 }
 add_action( 'init', 'testimonial_post_type', 0 );
 
+//Throw in a metabox for subtitles used in the sidebar 
+
+function sidebar_subtitle_get_meta( $value ) {
+	global $post;
+
+	$field = get_post_meta( $post->ID, $value, true );
+	if ( ! empty( $field ) ) {
+		return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+	} else {
+		return false;
+	}
+}
+
+function sidebar_subtitle_add_meta_box() {
+	add_meta_box(
+		'sidebar_subtitle-sidebar-subtitle',
+		__( 'Sidebar Subtitle', 'sidebar_subtitle' ),
+		'sidebar_subtitle_html',
+		'post',
+		'normal',
+		'default'
+	);
+	add_meta_box(
+		'sidebar_subtitle-sidebar-subtitle',
+		__( 'Sidebar Subtitle', 'sidebar_subtitle' ),
+		'sidebar_subtitle_html',
+		'page',
+		'normal',
+		'default'
+	);
+}
+add_action( 'add_meta_boxes', 'sidebar_subtitle_add_meta_box' );
+
+function sidebar_subtitle_html( $post) {
+	wp_nonce_field( '_sidebar_subtitle_nonce', 'sidebar_subtitle_nonce' ); ?>
+
+	<p>Add a snazzy subtitle to be displayed in the sidebar section of each page / post</p>
+
+	<p>
+		<label for="sidebar_subtitle_subtitle_text"><?php _e( 'Subtitle Text', 'sidebar_subtitle' ); ?></label><br>
+		<textarea name="sidebar_subtitle_subtitle_text" id="sidebar_subtitle_subtitle_text" ><?php echo sidebar_subtitle_get_meta( 'sidebar_subtitle_subtitle_text' ); ?></textarea>
+	
+	</p><?php
+}
+
+function sidebar_subtitle_save( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+	if ( ! isset( $_POST['sidebar_subtitle_nonce'] ) || ! wp_verify_nonce( $_POST['sidebar_subtitle_nonce'], '_sidebar_subtitle_nonce' ) ) return;
+	if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+	if ( isset( $_POST['sidebar_subtitle_subtitle_text'] ) )
+		update_post_meta( $post_id, 'sidebar_subtitle_subtitle_text', esc_attr( $_POST['sidebar_subtitle_subtitle_text'] ) );
+}
+add_action( 'save_post', 'sidebar_subtitle_save' );
+
+/*
+	Usage: sidebar_subtitle_get_meta( 'sidebar_subtitle_subtitle_text' )
+*/
+
+
 ?>
