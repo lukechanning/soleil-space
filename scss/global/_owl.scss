@@ -3,7 +3,7 @@
     
     //Fix that navigation, so ugly!
     .owl-dots {
-        background-color: $oil;
+        background-color: darken($baseColour, 10%);
         margin-top: 0 !important;
         padding: rem-calc(5px) 0;
     }

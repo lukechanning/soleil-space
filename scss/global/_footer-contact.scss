@@ -100,7 +100,7 @@
   //Defin the text section style
   .info-block {
     padding: rem-calc(60px) rem-calc(20px);
-    background-color: #292c2f;
+    background-color: darken($baseColour, 10%);
     min-height: 310px;
   }
   
