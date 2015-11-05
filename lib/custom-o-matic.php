@@ -48,6 +48,11 @@ add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme s
 function soleil_customize_register( $wp_customize ) {
     
     //Add custom logo via customization
+    $wp_customize->add_section( 'soleil_logo_section' , array(
+        'title'       => __( 'Soleil Logo', 'reverie' ),
+        'priority'   => 20,
+        'description' => 'Add a logo to replace the header image, over the stock space',
+    ) );
     $wp_customize->add_setting( 'soleil_logo' );
     $wp_customize->add_control( new WP_Customize_Image_Control(
     $wp_customize, 'soleil_logo', array(
@@ -58,7 +63,7 @@ function soleil_customize_register( $wp_customize ) {
     
     //Add Image to Homepage
     $wp_customize->add_section( 'soleil_contact_section' , array(
-        'title'       => __( 'Soleil Logo', 'reverie' ),
+        'title'       => __( 'Soleil Contact Section', 'reverie' ),
         'priority'   => 30,
         'description' => 'Add a photo to replace the stock image for the contact section, just above the footer',
     ) );
@@ -68,62 +73,6 @@ function soleil_customize_register( $wp_customize ) {
         'label'   => __( 'Contact Section', 'reverie' ),
         'section' => 'soleil_contact_section',
         'settings' => 'soleil_contact',
-    ) ) );
-    
-    //Select sidebar image #1
-    $wp_customize->add_section( 'soleil_sidebar_one' , array(
-        'title'       => __( 'Soleil Sidebar #1', 'reverie' ),
-        'priority'   => 30,
-        'description' => 'Add a photo to randomly appear in the sidebar on pages',
-    ) );
-    $wp_customize->add_setting( 'soleil_side_one' );
-    $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'soleil_side_one', array(
-        'label'   => __( 'Sidebar Photo One', 'reverie' ),
-        'section' => 'soleil_sidebar_one',
-        'settings' => 'soleil_side_one',
-    ) ) );
-    
-    //Select sidebar image #2
-    $wp_customize->add_section( 'soleil_sidebar_two' , array(
-        'title'       => __( 'Soleil Sidebar #2', 'reverie' ),
-        'priority'   => 30,
-        'description' => 'Add a photo to randomly appear in the sidebar on pages',
-    ) );
-    $wp_customize->add_setting( 'soleil_side_two' );
-    $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'soleil_side_two', array(
-        'label'   => __( 'Sidebar Photo two', 'reverie' ),
-        'section' => 'soleil_sidebar_two',
-        'settings' => 'soleil_side_two',
-    ) ) );
-    
-	//Select sidebar image #3
-    $wp_customize->add_section( 'soleil_sidebar_three' , array(
-        'title'       => __( 'Soleil Sidebar #3', 'reverie' ),
-        'priority'   => 30,
-        'description' => 'Add a photo to randomly appear in the sidebar on pages',
-    ) );
-    $wp_customize->add_setting( 'soleil_side_three' );
-    $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'soleil_side_three', array(
-        'label'   => __( 'Sidebar Photo three', 'reverie' ),
-        'section' => 'soleil_sidebar_three',
-        'settings' => 'soleil_side_three',
-    ) ) );
-    
-    //Select sidebar image #4
-    $wp_customize->add_section( 'soleil_sidebar_four' , array(
-        'title'       => __( 'Soleil Sidebar #4', 'reverie' ),
-        'priority'   => 30,
-        'description' => 'Add a photo to randomly appear in the sidebar on pages',
-    ) );
-    $wp_customize->add_setting( 'soleil_side_four' );
-    $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'soleil_side_four', array(
-        'label'   => __( 'Sidebar Photo four', 'reverie' ),
-        'section' => 'soleil_sidebar_four',
-        'settings' => 'soleil_side_four',
     ) ) );
     
     

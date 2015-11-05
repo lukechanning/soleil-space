@@ -4,7 +4,7 @@
             dynamic_sidebar('home-middle');
         endif;
     ?>
-    <div class="large-6 box right columns" data-parallax="scroll" data-image-src="/wp-content/themes/grunterie/img/testimonials-bg.png">
+    <div class="large-6 box right columns" data-parallax="scroll" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/img/testimonials-bg.png">
         <div class="owl-carousel owl-theme">
             <?php
                 query_posts( array ( 'post_type' => 'testimonial', 'posts_per_page' => 6, 'order' => 'RAND' ) );

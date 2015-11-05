@@ -25,7 +25,9 @@
                     if( get_theme_mod( 'soleil_logo') ) :
                         echo '<img src="' . esc_url(get_theme_mod( 'soleil_logo' )) . '" />';
                     else : 
-                      echo '<h3>'. wp_title('|', true, 'right'); bloginfo('name') . '</h3>';
+                      ?>
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/soleil-logo.png">
+                      <?php
                     endif;
                 ?>
               </a>
