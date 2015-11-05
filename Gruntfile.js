@@ -56,7 +56,8 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'js/modernizr.min.js': ['bower_components/modernizr/modernizr.js']
+                    'js/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
+                    'js/parallax.min.js': ['bower_components/parallax.js/parallax.js'],
                 }
             }
         },
@@ -67,12 +68,12 @@ module.exports = function (grunt) {
 				separator: ';'
 			},
 
-			dist: {
+			main: {
 
 				src: [
 
 					// Foundation core
-					'bower_components/foundation/js/foundation/foundation.js',
+					'bower_components/foundation/js/foundation/foundation.min.js',
 
 					// Pick the components you need in your project
 					'bower_components/foundation/js/foundation/foundation.abide.js',
