@@ -1,3 +1,21 @@
+//Fire the Owl!
+
+jQuery(document).ready(function() {
+		jQuery('.owl-carousel').owlCarousel({
+        loop:true,
+        items: 1,
+        center: true,
+        margin:10
+    });	
+    jQuery('.owl-carousel-testimonial').owlCarousel({
+        loop:true,
+        items: 1,
+        center: true,
+        nav: true,
+        margin: 10
+    });	
+});
+
 //Parallax!
 /*!
  * parallax.js v1.3.1 (http://pixelcog.github.io/parallax.js/)

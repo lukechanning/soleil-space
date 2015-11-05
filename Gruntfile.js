@@ -62,12 +62,46 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            main: {
-                nonull: true,
-                src: 'bower_components/foundation/js/foundation.min.js',
-                dest: 'js/foundation.min.js'
-            }
-        }
+
+			options: {
+				separator: ';'
+			},
+
+			dist: {
+
+				src: [
+
+					// Foundation core
+					'bower_components/foundation/js/foundation/foundation.js',
+
+					// Pick the components you need in your project
+					'bower_components/foundation/js/foundation/foundation.abide.js',
+					'bower_components/foundation/js/foundation/foundation.accordion.js',
+					'bower_components/foundation/js/foundation/foundation.alert.js',
+					'bower_components/foundation/js/foundation/foundation.clearing.js',
+					'bower_components/foundation/js/foundation/foundation.dropdown.js',
+					'bower_components/foundation/js/foundation/foundation.equalizer.js',
+					'bower_components/foundation/js/foundation/foundation.interchange.js',
+					'bower_components/foundation/js/foundation/foundation.joyride.js',
+					'bower_components/foundation/js/foundation/foundation.magellan.js',
+					'bower_components/foundation/js/foundation/foundation.offcanvas.js',
+					'bower_components/foundation/js/foundation/foundation.orbit.js',
+					'bower_components/foundation/js/foundation/foundation.reveal.js',
+					'bower_components/foundation/js/foundation/foundation.slider.js',
+					'bower_components/foundation/js/foundation/foundation.tab.js',
+					'bower_components/foundation/js/foundation/foundation.tooltip.js',
+					'bower_components/foundation/js/foundation/foundation.topbar.js',
+
+					// Include your own custom bower scripts here as needed
+                    'bower_components/owl.carousel/dist/owl.carousel.min.js',
+				],
+
+				// Finally, concatenate all the files above into one single file
+				dest: 'js/foundation.min.js'
+
+			}
+
+		},
 
     });
 

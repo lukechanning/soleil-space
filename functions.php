@@ -17,9 +17,9 @@ require_once('lib/clean.php'); // do all the cleaning and enqueue here
 
 /*
 2. lib/enqueue-style.php
-    - enqueue Foundation and Reverie CSS
+    - enqueue Foundation and Reverie CSS / Additional jQuery
 */
-require_once('lib/enqueue-style.php');
+require_once('lib/enqueue.php');
 
 /*
 3. lib/foundation.php
