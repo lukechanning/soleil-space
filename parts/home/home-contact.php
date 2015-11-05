@@ -1,8 +1,8 @@
 <div class="footer-contact row">
     <div class="large-4 columns photo-pop" data-parallax="scroll"
     <?php
-        if( get_theme_mod( 'soleil_contact_section') ) :
-            echo 'data-image-src="' . esc_url(get_theme_mod( 'soleil_contact_section' )) . '">';
+        if( get_theme_mod( 'soleil_contact') ) :
+            echo 'data-image-src="' . esc_url(get_theme_mod( 'soleil_contact' )) . '">';
         else : 
           echo 'data-image-src="'. get_stylesheet_directory_uri() .'/img/bottom-footer.jpg">';
         endif;

@@ -57,14 +57,28 @@ section.home-middle {
             }
         }
         &.right {
-            //background: #f4f4f4 url('/wp-content/themes/grunterie/img/testimonials-bg.png');
             background-size: cover;
             background-repeat: no-repeat;
+            background: -moz-linear-gradient(top, transparent 0%, rgba(85, 85, 85, 0.65) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(85, 85, 85, 0.65)));
+            background: -webkit-linear-gradient(top, transparent 0%, rgba(85, 85, 85, 0.65) 100%);
+            background: -o-linear-gradient(top, transparent 0%, rgba(85, 85, 85, 0.65) 100%);
+            background: -ms-linear-gradient(top, transparent 0%, rgba(85, 85, 85, 0.65) 100%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(85, 85, 85, 0.65) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6555555',GradientType=0 );
         }
         .testimonial {
             margin-top: 24vh;
             margin-top: rem-calc(80px);
             text-align: right;
+            p {
+                color: $white;
+                font-weight: 700;
+                span {
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+            }
         }
         blockquote {
             border-left: rem-calc(3px) solid rgba(25,25,25,0.55);

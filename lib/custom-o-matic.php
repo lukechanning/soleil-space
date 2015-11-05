@@ -62,6 +62,20 @@ function soleil_customize_register( $wp_customize ) {
     ) ) );
     
     //Add Image to Homepage
+    $wp_customize->add_section( 'soleil_testimonial_section' , array(
+        'title'       => __( 'Soleil Testimonial Section', 'reverie' ),
+        'priority'   => 30,
+        'description' => 'Add a photo to replace the stock image for the testimonial section, just above the footer',
+    ) );
+    $wp_customize->add_setting( 'soleil_testimonial' );
+    $wp_customize->add_control( new WP_Customize_Image_Control(
+    $wp_customize, 'soleil_testimonial', array(
+        'label'   => __( 'Testimonial Section', 'reverie' ),
+        'section' => 'soleil_testimonial_section',
+        'settings' => 'soleil_testimonial',
+    ) ) );
+    
+    //Add Image to Homepage contact section
     $wp_customize->add_section( 'soleil_contact_section' , array(
         'title'       => __( 'Soleil Contact Section', 'reverie' ),
         'priority'   => 30,
