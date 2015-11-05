@@ -4,34 +4,18 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="row full-width">
-    <div class="small-12 medium-3 large-4 columns">
-      <i class="fi-laptop"></i>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maiores alias ea sunt facilis impedit fuga dignissimos illo quaerat iure in nobis id quos, eaque nostrum! Unde, voluptates suscipit repudiandae!</p>
-    </div>
-    <div class="small-12 medium-3 large-4 columns">
-      <i class="fi-html5"></i>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit impedit consequuntur at! Amet sed itaque nostrum, distinctio eveniet odio, id ipsam fuga quam minima cumque nobis veniam voluptates deserunt!</p>
-    </div>
-    <div class="small-6 medium-3 large-2 columns">
-      <h4>Work With Me</h4>
-      <ul class="footer-links">
-        <li><a href="#">What I Do</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">FAQ's</a></li>
-      <ul>
-    </div>
-    <div class="small-6 medium-3 large-2 columns">
-      <h4>Follow Me</h4>
-      <ul class="footer-links">
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Dribbble</a></li>
-      <ul>
-    </div>
+    <?php
+      if ( is_active_sidebar('footer-one') || is_active_sidebar('footer-two') || is_active_sidebar('footer-three') || is_active_sidebar('footer-four') ) :
+        //Fire that footer!
+          dynamic_sidebar('footer-one');
+          dynamic_sidebar('footer-two');
+          dynamic_sidebar('footer-three');
+          dynamic_sidebar('footer-four');
+      else :
+          //or you know . . . maybe not
+          echo '<h3>Nothing to show here — go grab some text widgets and get cranking!</h3>';
+      endif;
+    ?>
   </div>
 </footer>
 
