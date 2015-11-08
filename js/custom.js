@@ -1,5 +1,8 @@
-//Fire the Owl!
+  /////////////////////////////////
+ // Get our owl on right here  //
+////////////////////////////////
 
+//Fire the Owl!
 jQuery(document).ready(function() {
 		jQuery('.owl-carousel').owlCarousel({
         loop:true,
@@ -15,6 +18,10 @@ jQuery(document).ready(function() {
         margin: 10
     });	
 });
+
+  /////////////////////////////////
+ // Sidebar agent stuff         //
+///////////////////////////////// 
 
 //Custom code to make sure that our image section matches the height of our content
 function updateSidebar() {
@@ -41,3 +48,19 @@ jQuery(document).ready(function() {
 jQuery(window).resize(function() {
     updateSidebar();
 });
+
+  ////////////////////////////////
+ // Booker agent scripts       //
+////////////////////////////////
+
+//Let's add some stuff to toggle our booker agent
+
+(function($) {
+    $('#slide-out').click(function() {
+        if ( $("#booker-agent").hasClass("clicked") ) {
+             $("#booker-agent").removeClass("clicked").animate({ "right" : "-=32rem" });
+        } else {
+            $("#booker-agent").addClass("clicked").animate({ "right" : "0" });
+        }
+    });
+})(jQuery);

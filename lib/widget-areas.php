@@ -40,6 +40,16 @@ function custom_sidebar_widgets() {
 	));
 
 	register_sidebar(array(
+	  'id' => 'booker',
+	  'name' => __( 'Booker Content', 'grunterie' ),
+	  'description' => __( 'Add a text widget or form function to display in the Booker', 'grunterie' ),
+	  'before_widget' => '',
+	  'after_widget' => '',
+	  'before_title' => '<h2>',
+	  'after_title' => '</h2>'
+	));
+	
+	register_sidebar(array(
 	  'id' => 'footer-contact-flash',
 	  'name' => __( 'Footer Contact Flash', 'grunterie' ),
 	  'description' => __( 'Add some text to really make the contact section pop!', 'grunterie' ),
