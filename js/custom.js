@@ -55,6 +55,19 @@ jQuery(window).resize(function() {
 
 //Fire off Sidr
 (function($){
-  $('#booker-button').sidr();
+  $('#booker-button').sidr({
+        side: 'right',
+    });
+})(jQuery);
+
+//Move the butto when we click it
+(function($) {
+    $('#booker-agent').click(function() {
+        if ( $(this).hasClass("clicked") ) {
+             $(this).removeClass("clicked");
+        } else {
+            $(this).addClass("clicked");
+        }
+    });
 })(jQuery);
 

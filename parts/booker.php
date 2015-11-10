@@ -5,11 +5,12 @@
             <h3 class="book-title">Book Now</h3>
         </div>
     </a>
-    <div id="sidr">
-        <?php
-            if ( ! dynamic_sidebar('booker') ) :
-                dynamic_sidebar('booker');
-            endif;
-        ?>
-    </div>
+</div>
+
+<div id="sidr">
+    <?php
+        if ( ! dynamic_sidebar('booker') ) :
+            dynamic_sidebar('booker');
+        endif;
+    ?>
 </div>

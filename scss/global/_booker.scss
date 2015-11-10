@@ -1,16 +1,19 @@
-/*
 .book {
-    position: absolute;
+    position: fixed;
     right: -3rem;
-    top: 6rem;
+    top: 12rem;
+    height: 150px;
     padding: 1rem 0;
-    z-index: 250;
+    z-index: 100;
     @include radius(5px);
     @include single-transition(all, 300ms, ease-out);
+    &.clicked {
+        right: 15rem;
+    }
     .book-header {
         display: block;
         position: relative;
-        height: 125px;
+        min-height: 130px;
         float: left;
         width: 100%;
         background-color: $orange;
@@ -29,19 +32,4 @@
         -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
     }
-    .book-content {
-        display: none;
-        background: #333;
-        padding: 1rem;
-        h2, label {
-            color: $white;
-        }
-    }
-    //Let's add styles specific to our 'clicked' state
-    &.clicked {
-        .book-header {
-            width: 151px;
-        }
-    }
 }
-*/
