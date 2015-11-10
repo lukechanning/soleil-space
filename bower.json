@@ -3,6 +3,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "parallax.js": "~1.3.2",
-    "owl.carousel": "~2.0.0-beta.3"
+    "owl.carousel": "~2.0.0-beta.3",
+    "sidr": "~1.2.1"
   }
 }

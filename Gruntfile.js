@@ -59,6 +59,7 @@ module.exports = function (grunt) {
                     'js/modernizr.min.js': ['bower_components/modernizr/modernizr.js'],
                     'js/parallax.min.js': ['bower_components/parallax.js/parallax.js'],
                     'js/owl.min.js': ['bower_components/owl.carousel/dist/owl.carousel.js'],
+                    'js/sidr.min.js': ['bower_components/sidr/jquery.sidr.min.js'],
                 }
             }
         },

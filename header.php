@@ -29,7 +29,10 @@
 	<!-- Add the Owl Carousel -->
 	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css" />
-
+	
+	<!-- Add Sidr CSS -->
+	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/sidr/stylesheets/jquery.sidr.dark.css" />
+	
 	<!-- Let's get some icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
 	
