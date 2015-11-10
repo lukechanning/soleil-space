@@ -25,14 +25,7 @@
 	<!-- Enable Startup Image for iOS Home Screen Web App -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
-	
-	<!-- Add the Owl Carousel -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.min.css" />
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.default.min.css" />
-	
-	<!-- Add Sidr CSS -->
-	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/sidr/stylesheets/jquery.sidr.dark.css" />
-	
+
 	<!-- Let's get some icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
 	
