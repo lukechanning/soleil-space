@@ -4,7 +4,7 @@
 
 //Fire the Owl!
 jQuery(document).ready(function() {
-		jQuery('.owl-carousel').owlCarousel({
+	jQuery('.owl-carousel').owlCarousel({
         loop:true,
         items: 1,
         center: true,
@@ -60,9 +60,10 @@ jQuery(window).resize(function() {
     });
 })(jQuery);
 
-//Move the butto when we click it
+//Move the button when we click it so it stays in place
 (function($) {
     $('#booker-agent').click(function() {
+        $(document).trigger('resize');
         if ( $(this).hasClass("clicked") ) {
              $(this).removeClass("clicked");
         } else {

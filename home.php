@@ -2,8 +2,7 @@
 
 <!-- Row for main content area -->
 <?php
-//Get our book now button
-get_template_part('parts/booker');
+
 ?>
 	<div class="large-12 columns home-content" id="content" role="main">
 	    <?php
