@@ -67,8 +67,11 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 nonull: true,
-                src: 'bower_components/foundation/js/foundation.min.js',
-                dest: 'js/foundation.min.js'
+                files : [
+                    {src: 'bower_components/foundation/js/foundation.min.js', dest: 'js/foundation.min.js'},
+                    {src: 'bower_components/owl.carousel/dist/assets/owl.carousel.min.css', dest: 'css/owl.carousel.min.css'},
+                    {src: 'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css', dest: 'css/owl.default.min.css'},
+                ]
             }
         }
 

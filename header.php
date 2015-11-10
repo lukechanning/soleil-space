@@ -27,8 +27,8 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/mobile-load.png" />
 	
 	<!-- Add the Owl Carousel -->
-	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
-	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.default.min.css" />
 	
 	<!-- Add Sidr CSS -->
 	<link rel="stylesheet" href="/wp-content/themes/grunterie/bower_components/sidr/stylesheets/jquery.sidr.dark.css" />
