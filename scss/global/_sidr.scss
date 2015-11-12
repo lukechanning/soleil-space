@@ -144,7 +144,7 @@
     color: $white;
   }
   input {
-    &[type="text"], &[type="password"], &[type="date"], &[type="datetime"], &[type="email"], &[type="number"], &[type="search"], &[type="tel"], &[type="time"], &[type="url"] {
+    &[type="text"], &[type="button"], &[type="password"], &[type="date"], &[type="datetime"], &[type="email"], &[type="number"], &[type="search"], &[type="tel"], &[type="time"], &[type="url"] {
       width: 100%;
       font-size: 13px;
       padding: 5px;
@@ -197,6 +197,9 @@
     &[type=button]:hover, &[type=submit]:hover {
       background: ligthen($oil, 10%);
     }
+  }
+  .textwidget {
+    padding: rem-calc(25px);
   }
 }
 
