@@ -8,6 +8,45 @@
   i {
     font-size: 100px;
   }
+  .button {
+    max-width: 85%;
+    background: transparent;
+    color: $white;
+    overflow: hidden;
+    border: 2px solid $white;
+    padding: 1rem 5rem 1.0625rem 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    span {
+        z-index: 100;
+        position: relative;
+    }
+    &:hover {
+        color: $baseColour;
+    }
+    &:hover:after {
+        height: 350%;
+        opacity: 1;
+        z-index: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 140%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        //background: #D59131;
+        background: $white;
+        opacity: 0;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+  }
 }
 
 .footer {
