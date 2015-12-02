@@ -25,8 +25,8 @@ jQuery(document).ready(function() {
 
 //Custom code to make sure that our image section matches the height of our content
 function updateSidebar() {
-    var $width = document.documentElement.clientWidth,
-        $height = document.documentElement.clientHeight,
+    var $width = jQuery( document ).width();
+        $height = jQuery( document ).height();
         $main = jQuery('#content').outerHeight();
 
     if($width > 755) {
