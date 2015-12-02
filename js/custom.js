@@ -63,7 +63,6 @@ jQuery(window).resize(function() {
 //Move the button when we click it so it stays in place
 (function($) {
     $('#booker-agent').click(function() {
-        $(window).trigger('resize').trigger('scroll');
         if ( $(this).hasClass("clicked") ) {
              $(this).removeClass("clicked");
         } else {
