@@ -193,6 +193,11 @@
       color: $white;
       background: $orange;
       width: 100%;
+      margin-top: 2rem;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
     }
     &[type=button]:hover, &[type=submit]:hover {
       background: ligthen($oil, 10%);
