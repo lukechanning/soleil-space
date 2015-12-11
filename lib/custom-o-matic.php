@@ -181,7 +181,14 @@ function sidebar_subtitle_html( $post) {
 		<label for="sidebar_subtitle_subtitle_text"><?php _e( 'Subtitle Text', 'sidebar_subtitle' ); ?></label><br>
 		<textarea name="sidebar_subtitle_subtitle_text" id="sidebar_subtitle_subtitle_text" ><?php echo sidebar_subtitle_get_meta( 'sidebar_subtitle_subtitle_text' ); ?></textarea>
 	
-	</p><?php
+	</p>
+	<p> If this is being used as a featured post, we want it to link somewhere </p>
+	<p>
+		<label for="sidebar_subtitle_link_url"><?php _e( 'Post Url', 'sidebar_subtitle' ); ?></label><br>
+		<input type="text" name="sidebar_subtitle_link_url" id="sidebar_subtitle_subtitle_text" value="<?php echo sidebar_subtitle_get_meta( 'sidebar_subtitle_link_url' ) ?>"></input>
+	
+	</p>
+	<?php
 }
 
 function sidebar_subtitle_save( $post_id ) {
@@ -191,6 +198,8 @@ function sidebar_subtitle_save( $post_id ) {
 
 	if ( isset( $_POST['sidebar_subtitle_subtitle_text'] ) )
 		update_post_meta( $post_id, 'sidebar_subtitle_subtitle_text', esc_attr( $_POST['sidebar_subtitle_subtitle_text'] ) );
+	if ( isset( $_POST['sidebar_subtitle_link_url'] ) )
+		update_post_meta( $post_id, 'sidebar_subtitle_link_url', esc_url( $_POST['sidebar_subtitle_link_url'] ) );
 }
 add_action( 'save_post', 'sidebar_subtitle_save' );
 

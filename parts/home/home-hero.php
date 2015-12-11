@@ -6,11 +6,20 @@
       while (have_posts()) : the_post();
         //If it's got a thumbnail, let's get that custom photo
         if (has_post_thumbnail( $post->ID ) ): ?>
-          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+          <?php
+          //Let's get our two important variables
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+          $postURL = sidebar_subtitle_get_meta( 'sidebar_subtitle_link_url' );
+          ?>
           <section class="hero item" style="background-image: url('<?php echo $image[0]; ?>')">
             <?php else: ?>
             <section class="hero item">
-        <?php endif; ?>
+        <?php
+        endif;
+        if ($postURL != '') :
+          echo '<a href="' . $postURL . '">';
+        endif;
+        ?>
              <div class="row">
                <?php //Let's get the title side of the deal ?>
                <div class="large-6 large-push-2 columns">
@@ -26,8 +35,12 @@
                     ?>
                 </div>
               </div>
-              
              </div>
+             <?php 
+             if ($postURL != '') :
+              echo '</a>';
+             endif;
+             ?>
           </section>
         <?php
       endwhile;
